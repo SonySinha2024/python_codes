@@ -1,0 +1,171 @@
+# def add(a,b):
+#     return a+b
+# print(add(4,5))
+
+# b=int(input("enter number:"))
+# h=int(input("enter number:"))
+# area= 0.5*b*h
+# print("area of triangle is",area)
+
+# def swap(a,b):
+#     a=a+b
+#     b=a-b
+#     a=a-b
+#     return a,b
+# a=int(input("enter a number:"))
+# b=int(input("enter a number:"))
+# print(swap(a,b))
+
+# a=5
+# b=10
+# print(f"before swapping a is {a} and b is {b}")
+# a,b=b,a
+# print(f"After Swapping a is {a} and  b is {b}")
+
+# import random
+# n=int(input("enter a number:"))
+# for i in range(n):
+#     print(f"Random Number {i+1}:{random.randint(1,50)}")
+
+## convert km to miles
+# m=float(input("enter km number"))
+# conversion_factor=0.6213
+# miles=m*conversion_factor
+# print(f"miles:{miles}")
+
+## convert fahreneit to celsius
+# f=float(input("enter fahrenheit:"))
+# celsius=9/32*f
+# print(f"celcius:{celsius}")
+
+# import calendar
+# year=int(input("enter year:"))
+# month=int(input("enter month:"))
+# calen=calendar.month(year,month)
+# print(calen)
+
+## leap year
+# year=int(input("enter year:"))
+# if year%4==0 and (year%100!=0 or year%400==0):
+#     print(f"{year} is a leap year")
+# else:
+#     print(f"{year} is not a leap year")
+
+
+## Prime Numbers
+# n=int(input("enter a number:"))
+# flag=False
+# if n==1:
+#     print(f"{n} is not a prime number")
+# elif n>2:
+#     for i in range(2,n):
+#         if n%i==0:
+#             flag=True
+#         else:
+#             flag=False
+#         break
+# if flag:
+#     print(f"{n}is not a prime number")
+# else:
+#     print(f"{n} is a prime number")
+
+## prime numbers 
+# lower_bound=int(input("enter a number:"))
+# upper_bound=int(input("enter a number:"))
+# if lower_bound ==1 or upper_bound==1:
+#     print(f"{lower_bound} and {upper_bound} is not a prime number")
+# print(f"Prime numbers between {lower_bound} to {upper_bound} are:")
+
+# for num in range(lower_bound,upper_bound+1):
+#     for i in range(2,num):
+#         if (num%i)==0:
+#           break
+#     else:
+#         print(num)
+
+## Factorial Number
+# fact=1
+# num=int(input("enter a number:"))
+# for i in range(1,num+1):
+#     fact=fact*i
+# print(fact)
+
+
+## Multiplication Table
+# def multiplication(a,b):
+#     return a*b
+# a=int(input("Enter a number"))
+# for i in range(1,10):
+#     print(f"{a}*{i}={multiplication(a,i)}")
+    
+## Fibonacci Series
+# n=int(input("enter number term:"))
+# if n<=0:
+#     print("Please enter a positive integer.")
+# n1,n2=0,1
+# if(n==1):
+#     print(f"FIBONACCI SEQUENCE:{n}")
+# count=0
+# print("Fibonacci sequence:")
+# while count<n:
+#     print(n1)
+#     nth=n1+n2
+#     n1=n2
+#     n2=nth
+#     count+=1
+
+## Sum of natural numbers
+# n=int(input("enter a number:"))
+# sum=0
+# for i in range(1,n+1):
+#     sum+=i
+#     print(sum)
+
+## Armstrong number
+#153
+#len=3
+#sum of powers=1+125+27=153
+# n=int(input("Enter number:"))
+# len=len(str(n))
+# sum_of_powers=0
+# digit=0
+# tempnum=n
+# while tempnum>0:
+#     ## This extracts the last digit of the number. For example, if tempnum = 153, the last digit would be 3.
+#     digit=tempnum%10
+#     ## Raise the digit to the power of the number of digits (len) and add it to sum_of_powers.
+#     sum_of_powers+=digit**len
+#     ## This removes the last digit from tempnum by performing integer division by 10.
+#     tempnum//=10 
+# if sum_of_powers==n:
+#     print(f"{n} is a armstrong number")
+# else:
+#     print(f"{n} is not a armstrong number")
+
+
+## Palindrome number
+# n=int(input("enter number:"))
+# len=len(str(n))
+# tempnum=n
+# reversed_num=0
+# digit=0
+# while tempnum>0:
+#     digit=tempnum%10
+#     reversed_num=reversed_num*10+digit
+#     tempnum//=10
+# if reversed_num==n:
+#     print(f"{n} is a palindrome number")
+# else:
+#     print(f"{n} is not a palindrome number")
+
+## Sorting
+def bubblesort(arr):
+    n=len(arr)
+    for i in range(n):
+        for j in range(0,n-i-1):
+            if arr[j]>arr[j+1]:
+                arr[j],arr[j+1]=arr[j+1],arr[j]
+                           
+arr=[87,12,34,66,43,98,56]
+bubblesort(arr)
+print(f"sorted array:{arr}")
