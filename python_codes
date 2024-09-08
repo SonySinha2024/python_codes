@@ -169,3 +169,47 @@ def bubblesort(arr):
 arr=[87,12,34,66,43,98,56]
 bubblesort(arr)
 print(f"sorted array:{arr}")
+
+
+## replace blank with a character
+# def str_replace(text,ch):
+#     result=' '
+#     for i in text:
+#         if i==' ':
+#             i=ch
+#         result+=i
+#     return result
+## text ="he  o"
+## ch="l"
+##print(str_replace(text,ch))
+# print(str_replace("he  o","l"))
+
+## Square of number
+# def valid_square(number):
+#     square=int(number**0.5)
+#     if square**2==number:
+#         return True
+#     else:
+#         return False
+# print(valid_square(24))
+
+## Checking Anagrams
+# str1=str(input("enter word:"))
+# str2=str(input("enter word:"))
+# str1=sorted(str1.upper())
+# str2=sorted(str2.upper())
+# if(str1==str2):
+#     print(f"{str1} and {str2} are Anagrams")
+# else:
+#     print(f"{str1} and {str2} are not Anagrams")
+
+## Palindromes in Strings
+# Input string from the user
+str1 = input("Enter a word: ")
+## Convert to lowercase and remove spaces for consistency 
+str1 = str1.replace(" ", "").lower()
+## Check if the string is equal to its reverse
+if str1 == str1[::-1]:
+    print(f"'{str1}' is a palindrome")
+else:
+    print(f"'{str1}' is not a palindrome")
